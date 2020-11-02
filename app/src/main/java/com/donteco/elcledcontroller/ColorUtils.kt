@@ -12,8 +12,8 @@ import kotlin.math.sqrt
 
 object ColorUtils {
 
+    @Deprecated("because")
     private fun findDest(color1: Int, color2: Int): Double {
-//        Color.rgb(0,0,0).red
         return (((color1.red - color2.red).toFloat() * 0.299).pow(2)
                 + ((color1.green - color2.green).toFloat() * 0.587).pow(2)
                 + ((color1.blue - color2.blue).toFloat() * 0.114).pow(2))
@@ -21,7 +21,6 @@ object ColorUtils {
     }
 
     private fun findDest2(color1: Int, color2: Int): Float {
-//        Color.rgb(0,0,0).red
         return sqrt(
             ((color1.red - color2.red).toFloat()).pow(2)
                     + ((color1.green - color2.green).toFloat()).pow(2)

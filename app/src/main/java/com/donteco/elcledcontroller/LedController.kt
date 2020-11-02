@@ -11,9 +11,12 @@ object LedController {
 
     enum class LedColors(val command: String, val color: Int) {
         RED("0x04", Color.rgb(255, 0, 0)),
+        PINK("0x04", Color.rgb(255, 165, 165)), //if pink -> use red led
         GREEN("0x05", Color.rgb(0, 255, 0)),
         BLUE("0x06", Color.rgb(0, 0, 255)),
+        BLACK("0x06", Color.rgb(0, 0, 0)), //if need black -> use blue led
         WHITE("0x07", Color.rgb(255, 255, 255)),
+        GRAY("0x07", Color.rgb(140, 140, 140)),
         ORANGE("0x08", Color.rgb(255, 180, 0)),
         YELLOW("0x0c", Color.rgb(255, 255, 0)),
         YELLOW_GREEN("0x10", Color.rgb(200, 255, 0)),
@@ -29,11 +32,6 @@ object LedController {
     }
 
     private const val enableLed = "0x03"
-    const val red = "0x04"
-    const val green = "0x05"
-    const val blue = "0x06"
-    const val yellow = "0x0c"
-    const val orange = "0x08"
 
     fun setClosestColor(color: Int) {
         setColor(ColorUtils.findClosestColor(color).command)
