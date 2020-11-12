@@ -27,13 +27,18 @@ object LedController {
         PURPLE2("0x0e", Color.rgb(83, 0, 255)),
         PURPLE3("0x12", Color.rgb(120, 0, 255)),
         PURPLE4("0x16", Color.rgb(120, 85, 255)),
+
         /// additional for best parse
         BLACK("0x06", Color.rgb(0, 0, 0)), //if need black -> use blue led
         LIGHT_PURPLE("0x0e", Color.rgb(220, 136, 255)), // use purple
+        DARK_PURPLE("0x0e", Color.rgb(92, 0, 97)),
         PINK("0x04", Color.rgb(255, 165, 165)), //if pink -> use red led
         LIGHT_GREEN("0x05", Color.rgb(155, 255, 136)), // use green
+        DARK_GREEN("0x05", Color.rgb(3, 93, 3)), // use green
         LIGHT_BLUE("0x06", Color.rgb(136, 159, 255)), //use blue
-        LIGHT_YELLOW("0x0c", Color.rgb(255, 234, 136)) // use yellow
+        LIGHT_YELLOW("0x0c", Color.rgb(255, 234, 136)), // use yellow
+        GRAY_YELLOW_GREEN("0x10", Color.rgb(84, 93, 3)), // use yellow_green
+
     }
 
     private const val enableLed = "0x03"
